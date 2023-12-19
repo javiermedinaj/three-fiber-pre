@@ -8,7 +8,7 @@ const Navbar = () => {
           <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             {/* Puedes agregar tu imagen del logo aquí */}
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              Test
             </span>
           </a>
           <button

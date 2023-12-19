@@ -7,18 +7,20 @@ const Who = () => {
   return (
     <div className="h-screen flex justify-center">
       <div className="h-screen flex justify-between items-center mx-8 lg:mx-0">
-        <div className="flex-1">
+        <div className="w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-120 xl:h-120">
           <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
+            <ambientLight intensity={0.8} />
+            <directionalLight position={[3, 2, 1]} />
             <Suspense fallback={null}>
-              <ambientLight intensity={0.8} />
-              <directionalLight position={[3, 2, 1]} />
-              <Cube  className="w-1600px h-1600px"  scale={[10, 10, 10]}  /> {/* Ajusta la escala y altura del cubo aquí */}
+              <Cube scale={[10, 10, 10]} />
               <OrbitControls enableZoom={false} autoRotate />
             </Suspense>
           </Canvas>
         </div>
         <div className="flex-1 flex flex-col justify-center gap-20 lg:text-center">
-          <h1 className="text-4xl lg:text-6xl">Think outside the square space</h1>
+          <div>
+            <h1 className="text-4xl lg:text-6xl">Think outside the square space</h1>
+          </div>
           <div className="flex items-center gap-10">
             <h2 className="text-purple-500">Who we Are</h2>
           </div>
@@ -33,5 +35,6 @@ const Who = () => {
     </div>
   );
 };
+
 
 export default Who;
