@@ -12,7 +12,7 @@ const Who = () => {
             <Suspense fallback={null}>
               <ambientLight intensity={0.8} />
               <directionalLight position={[3, 2, 1]} />
-              <Cube  className="w-100 h-100"  scale={[10, 10, 10]} height="100%" /> {/* Ajusta la escala y altura del cubo aquí */}
+              <Cube  className="w-1600px h-1600px"  scale={[10, 10, 10]}  /> {/* Ajusta la escala y altura del cubo aquí */}
               <OrbitControls enableZoom={false} autoRotate />
             </Suspense>
           </Canvas>

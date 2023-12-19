@@ -7,9 +7,12 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Who />
+    <div className='container mx-auto'>
+      {/* <Navbar /> */}
+       <Hero /> 
+      {/* <Who /> */}
+
+    </div>
       
     </>
   );
