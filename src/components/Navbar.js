@@ -1,88 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            {/* Puedes agregar tu imagen del logo aquí */}
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Test
-            </span>
-          </a>
+    <>
+      <nav
+        className="relative flex w-full flex-nowrap items-center justify-between bg-neutral-800 py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start lg:py-4"
+        data-te-navbar-ref=""
+      >
+        <div className="container mx-auto flex items-center justify-between px-3">
+          <div className="mx-2">
+            <a className="text-xl text-neutral-100" href="#">
+              Navbar
+            </a>
+          </div>
           <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
+            onClick={toggleMenu}
+            className="lg:hidden text-white focus:outline-none"
           >
-            <span className="sr-only">Open main menu</span>
             <svg
-              className="w-5 h-5"
-              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-6 w-6"
             >
               <path
+                fillRule="evenodd"
+                d="M3 6h16M3 12h16m-7 6h7"
                 stroke="currentColor"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
-                d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
           </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="flex flex-col md:flex-row items-center md:items-stretch md:space-x-8 rtl:space-x-reverse md:mt-0 bg-gray-50 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
+          <div
+            className={`lg:flex ${isOpen ? 'block' : 'hidden'}`}
+            id="navbarSupportedContent10"
+          >
+            <ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row">
+              <li className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1">
                 <a
-                  href="#"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500"
+                  className="text-neutral-300 transition duration-200 hover:text-neutral-200 hover:ease-in-out focus:text-neutral-200 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 [&.active]:text-neutral-200"
                   aria-current="page"
+                  href="#"
                 >
                   Home
                 </a>
               </li>
-              <li>
+           
+              <li className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1">
                 <a
+                  className="p-0 text-neutral-300 transition duration-200 hover:text-neutral-200 hover:ease-in-out focus:text-neutral-200 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 [&.active]:text-neutral-200"
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Works
+                </a>
+              </li>
+              <li className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1">
+                <a
+                  className="p-0 text-neutral-300 transition duration-200 hover:text-neutral-200 hover:ease-in-out focus:text-neutral-200 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 [&.active]:text-neutral-200"
+                  href="#"
                 >
                   About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Contact
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

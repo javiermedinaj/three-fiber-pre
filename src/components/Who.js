@@ -19,17 +19,17 @@ const Who = () => {
         </div>
         <div className="flex-1 flex flex-col justify-center gap-20 lg:text-center">
           <div>
-            <h1 className="text-4xl lg:text-6xl">Think outside the square space</h1>
+            <h1 className="text-2xl lg:text-2xl ">Think outside the square space</h1>
           </div>
-          <div className="flex items-center gap-10">
-            <h2 className="text-purple-500">Who we Are</h2>
-          </div>
-          <p className="text-black text-lg lg:text-2xl">
+          <div className="flex justify-center">
+            <button className="text-purple-500 bg-purple-100 px-4 py-2 rounded">Who we Are</button>
+             </div>
+          <p className="text-black text-lg lg:text-2xl mb-6">
             A creative group of designers and developers with a passion for the arts.
           </p>
-          <button className="bg-purple-500 text-white font-semibold px-4 py-2 rounded cursor-pointer">
-            See our works
-          </button>
+          <div className="flex justify-center mb-2">
+            <button className="text-purple-500 bg-purple-100 px-4 py-2 rounded">Who we Are</button>
+             </div>
         </div>
       </div>
     </div>
