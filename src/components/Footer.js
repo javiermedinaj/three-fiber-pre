@@ -5,7 +5,7 @@ const Footer = () => {
     <>
   
   <footer className="flex flex-col items-center bg-gray-400 text-center text-white dark:bg-gray-900">
-    <div className="container px-6 pt-6">
+    <div className="container px-6 pt-6 mt-20">
       {/* Social media icons container */}
       <div className="mb-6 flex justify-center">
        

@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between px-3">
           <div className="mx-2">
             <a className="text-xl text-neutral-100" href="#">
-              Navbar
+              I
             </a>
           </div>
           <button

@@ -1,24 +1,20 @@
-import React from 'react';
-import Hero from './components/Hero';
-import Who from './components/Who';
-import Footer from './components/Footer';
-
-
-import Navbar from './components/Navbar';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Section from "./components/Section";
+import Who from "./components/Who";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
- 
-    <div className='px-0'>
-      <Navbar /> 
-      <Hero/> 
-      <Who /> 
-      <Footer/>
-    </div>
-
-
-      
+      <div className="px-0">
+        <Navbar />
+        <Hero />
+        <Section/>
+        <Who />
+        <Footer />
+      </div>
     </>
   );
 }
