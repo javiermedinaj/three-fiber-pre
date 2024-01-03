@@ -25,11 +25,7 @@ const Navbar = () => {
         data-te-navbar-ref=""
       >
         <div className="container mx-auto flex items-center justify-between px-3">
-          <div className="mx-2">
-            <a className="text-xl text-neutral-100" href="#">
-              I
-            </a>
-          </div>
+          
           <button
             onClick={toggleMenu}
             className="lg:hidden text-white focus:outline-none"

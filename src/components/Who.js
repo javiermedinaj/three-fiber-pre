@@ -23,9 +23,7 @@ const Who = () => {
           <div>
             <h1 className="text-2xl lg:text-2xl ">Think outside the square space</h1>
           </div>
-          <div className="flex justify-center">
-           <button className="text-purple-500 bg-purple-100 px-4 py-2 rounded dark:bg-purple-800 dark:text-white">Who we Are</button>
-             </div>
+         
           <p className="text-black text-lg lg:text-2xl mb-6 dark:text-white">
             A creative group of designers and developers with a passion for the arts.
           </p>
